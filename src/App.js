@@ -7,11 +7,13 @@ import Rank from './components/Rank/Rank.js';
 import Particles from 'react-particles-js';
 
 const particlesOptions = {
-  line_linked: {
-    shadow: {
-      enable: true,
-      color: "#3CA9D1",
-      blur: 5
+  particles: {
+    number: {
+      value: 79,
+      density: {
+        enable: true,
+        value_area: 800
+      }
     }
   }
 }
@@ -19,7 +21,7 @@ const particlesOptions = {
 function App() {
   return (
     <div className="App">
-      <Particles 
+      <Particles className= 'particles'
         params={particlesOptions}
       />    
     <Navigation />
