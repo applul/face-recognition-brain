@@ -11,7 +11,7 @@ const Logo =() => {
                 <div className="Tilt-inner pa3 ">
                     <img id="logo" alt = "Holo's Logo" src={brain}/>
                 </div>
-                <brain />
+                {/* <Brain /> */}
             </Tilt>
         </div>
     )
