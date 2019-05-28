@@ -6,6 +6,14 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import Rank from './components/Rank/Rank.js';
 import Particles from 'react-particles-js';
 
+const Clarifai = require('clarifai');
+
+// initialize with your api key. This will also work in your browser via http://browserify.org/
+
+const app = new Clarifai.App({
+ apiKey: '777ff9cbc1c546a3959417cb4cdd73a6'
+});
+
 const particlesOptions = {
   particles: {
     number: {
@@ -25,6 +33,7 @@ class App extends Component {
       input: ""
     }
   };
+  
 
   onInputChange = (event) => {
     this.setState({
@@ -35,7 +44,15 @@ class App extends Component {
 
   onSubmit = () => {
     console.log("click");
-  }
+    app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
+      function(response) {
+        // do something with response
+      },
+      function(err) {
+        // there was an error
+      }
+    );
+  };
 
   render() {
     return (
