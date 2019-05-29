@@ -47,6 +47,7 @@ class App extends Component {
     console.log("click");
     app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
       function(response) {
+        console.log(response);
         // do something with response
       },
       function(err) {
@@ -65,7 +66,7 @@ class App extends Component {
       <Logo />
       <Rank Holo = {this.state.input} />
       <ImageLinkForm onInputChange={this.onInputChange} onSubmit = {this.onSubmit}  />
-      {/* <FaceRecognition />  */}
+      <FaceRecognition /> 
       </div>
     );
   }
