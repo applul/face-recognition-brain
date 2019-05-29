@@ -5,8 +5,9 @@ import Logo from './components/Logo/Logo.js';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import Rank from './components/Rank/Rank.js';
 import Particles from 'react-particles-js';
+import Clarifai from 'clarifai';
 
-const Clarifai = require('clarifai');
+// const Clarifai = require('clarifai');
 
 // initialize with your api key. This will also work in your browser via http://browserify.org/
 
