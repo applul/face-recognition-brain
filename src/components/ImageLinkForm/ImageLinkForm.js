@@ -1,6 +1,6 @@
 import React from "react";
 import './ImageLinkForm.css';
-import { tsPropertySignature } from "@babel/types";
+import Tachyons from 'tachyons';
  
 const ImageLinkForm =({ onInputChange, onSubmit }) => {
     return(
