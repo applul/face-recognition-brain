@@ -1,13 +1,14 @@
 import React from 'react';
 import Tachyons from 'tachyons';
 
-const FaceRecognition = () => {
+const FaceRecognition = ({ imageUrl }) => {
     return (
-        <div className='center'>
-        <img alt='Holo' src='https://samples.clarifai.com/face-det.jpg' />
-
-        </div>
+        <div className='center ma'>
+            <div className ='absolute mt2'>
+                <img width='500px' height='auto' alt='' src= {imageUrl} />
+            </div>
+        </div> 
     )
 }
 
-export default FaceRecognition;
+export default FaceRecognition; 

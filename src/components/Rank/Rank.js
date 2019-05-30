@@ -7,7 +7,6 @@ const Rank =(props) => {
             {'Holo, your current Rank is... '}
             </div>
             <div className = ' white f1' >
-            {props.Holo}
             </div>
         </div>
     )
