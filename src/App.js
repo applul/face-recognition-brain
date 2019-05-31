@@ -54,11 +54,10 @@ class App extends Component {
   }
 
   displayFaceBox = (box) => {
-    console.log(box);
     this.setState({
       box: box
     })
-    console.log(2, this.state.box)
+    console.log("this.state.box:", this.state.box)
   }
   
 
