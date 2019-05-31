@@ -7,7 +7,7 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition.js';
 import Rank from './components/Rank/Rank.js';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
-
+// I love Holo!
 // const Clarifai = require('clarifai');
 
 // initialize with your api key. This will also work in your browser via http://browserify.org/
@@ -54,6 +54,7 @@ class App extends Component {
   }
 
   displayFaceBox = (box) => {
+    console.log(box);
     this.setState({
       box: box
     })
