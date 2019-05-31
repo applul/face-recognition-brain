@@ -26,7 +26,7 @@ const particlesOptions = {
       }
     }
   }
-}
+};
 
 class App extends Component {
   constructor() {
@@ -40,9 +40,17 @@ class App extends Component {
   
 
   calculateFaceLocation = (data) => {
-    this.setState({
-      box: "testing",
-    })
+    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    const image = document.getElementById("inputimage")
+    const width = Number(image.width);
+    const height = Number(image.height);
+    console.log( width, height);
+    return {
+      leftCol: clarifaiFace.left_col * width,
+      topRow: clarifaiFace.top_row * height,
+      rightCol: width = (clarifaiFace.right_col * width),
+      bottomRow: height = (clarifaiFace.bottom_row * height),
+    }
   }
   
 
@@ -51,17 +59,17 @@ class App extends Component {
       input: event.target.value
     })
     console.log(event.target.value);
-  }
+  };
 
   onSubmit = () => {
     this.setState({
       imageUrl: this.state.input
-    })
+    });
     app.models.predict( Clarifai.FACE_DETECT_MODEL, this.state.input)
-    .then(response => this.calculateFaceLocation(response)
-    .catch(err => console.log(err))
-    );
+    .then(response => this.calculateFaceLocation(response))
+    .catch(err => console.log(err));
   };
+
 
   render() {
     return (
