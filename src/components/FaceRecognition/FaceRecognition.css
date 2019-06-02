@@ -1,8 +1,13 @@
 .bounding-box {
     position: absolute;
     box-shadow: inset 0 0 0 3px #149df2;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
     cursor: pointer;
+    z-index: 1;
+}
+
+#Holosbox {
+    z-index: 1;
 }

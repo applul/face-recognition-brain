@@ -37,6 +37,12 @@ class App extends Component {
       box: {}
     }
   };
+  componentDidMount() {
+    document.clear();
+  }
+  componentDidUpdate() {
+    document.clear();
+  }
   
 
   calculateFaceLocation = (data) => {
