@@ -54,8 +54,8 @@ class BB extends Component {
     return {
       leftCol: clarifaiFace.left_col * width,
       topRow: clarifaiFace.top_row * height,
-      rightCol: width = (clarifaiFace.right_col * width),
-      bottomRow: height = (clarifaiFace.bottom_row * height),
+      rightCol: width - (clarifaiFace.right_col * width),
+      bottomRow: height - (clarifaiFace.bottom_row * height),
     }
   }
 
