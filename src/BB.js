@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './BB.css';
 import Navigation from './components/Navigation/Navigation.js';
 import Logo from './components/Logo/Logo.js';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
@@ -28,7 +28,7 @@ const particlesOptions = {
   }
 };
 
-class App extends Component {
+class BB extends Component {
   constructor() {
     super();
     this.state = {
@@ -100,4 +100,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default BB;
