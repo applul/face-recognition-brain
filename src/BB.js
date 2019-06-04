@@ -37,7 +37,7 @@ class BB extends Component {
       input: "",
       imageUrl: "",
       box: {},
-      route: 'signin '
+      route: 'signin'
     }
   };
   componentDidMount() {
