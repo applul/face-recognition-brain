@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './BB.css';
 import Navigation from './components/Navigation/Navigation.js';
+import SignIn from './components/SignIn/SignIn.js';
 import Logo from './components/Logo/Logo.js';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition.js';
 import Rank from './components/Rank/Rank.js';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
+
 // I love Holo!
 // const Clarifai = require('clarifai');
 
@@ -91,6 +93,7 @@ class BB extends Component {
           params={particlesOptions}
         />    
       <Navigation />
+      <SignIn />
       <Logo />
       <Rank />
       <ImageLinkForm onInputChange={this.onInputChange} onSubmit = {this.onSubmit}  />
