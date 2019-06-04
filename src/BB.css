@@ -20,3 +20,7 @@
   bottom: 0;
   z-index: -1;
 }
+
+#disclaimer {
+  font-size: 21px;
+}
