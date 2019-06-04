@@ -36,7 +36,8 @@ class BB extends Component {
     this.state = {
       input: "",
       imageUrl: "",
-      box: {}
+      box: {},
+      route: 'signin '
     }
   };
   componentDidMount() {
@@ -93,11 +94,15 @@ class BB extends Component {
           params={particlesOptions}
         />    
       <Navigation />
-      <SignIn />
-      <Logo />
-      <Rank />
-      <ImageLinkForm onInputChange={this.onInputChange} onSubmit = {this.onSubmit}  />
-      <FaceRecognition box = {this.state.box} imageUrl = {this.state.imageUrl} /> 
+      { this.state.route === "signin"
+      ? <SignIn />
+      : <div> 
+          <Logo />
+          <Rank />
+          <ImageLinkForm onInputChange={this.onInputChange} onSubmit = {this.onSubmit}  />
+          <FaceRecognition box = {this.state.box} imageUrl = {this.state.imageUrl} /> 
+        </div>
+      }
       </div>
     );
   }
