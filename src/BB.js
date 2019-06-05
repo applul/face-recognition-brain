@@ -104,22 +104,23 @@ class BB extends Component {
 
 
   render() {
+   const { isSignedIn, route, box, imageUrl } = this.state;
     return (
       <div className="App">
         <Particles className= 'particles'
           params={particlesOptions}
         />    
-      <Navigation isSignedIn = {this.state.isSignedIn} onRouteChange = {this.onRouteChange} />
-      { this.state.route === "home"
+      <Navigation isSignedIn = {isSignedIn} onRouteChange = {this.onRouteChange} />
+      { route === "home"
       ?  <div> 
           <Logo />
           <Rank />
           <ImageLinkForm onInputChange={this.onInputChange} onSubmit = {this.onSubmit}  />
-          <FaceRecognition box = {this.state.box} imageUrl = {this.state.imageUrl} /> 
+          <FaceRecognition box = {box} imageUrl = {mageUrl} /> 
         </div>
-      : ( this.state.route === 'signin') 
+      : (route === 'signin') 
         ? <SignIn onRouteChange = {this.onRouteChange} />
-        : <Register onRouteChange = {this.onRouteChange} isSignedIn = {this.state.isSignedIn} />
+        : <Register onRouteChange = {this.onRouteChange} isSignedIn = {isSignedIn} />
       }
       </div>
     );
