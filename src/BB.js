@@ -116,7 +116,7 @@ class BB extends Component {
           <Logo />
           <Rank />
           <ImageLinkForm onInputChange={this.onInputChange} onSubmit = {this.onSubmit}  />
-          <FaceRecognition box = {box} imageUrl = {mageUrl} /> 
+          <FaceRecognition box = {box} imageUrl = {imageUrl} /> 
         </div>
       : (route === 'signin') 
         ? <SignIn onRouteChange = {this.onRouteChange} />
