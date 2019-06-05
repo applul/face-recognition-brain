@@ -88,6 +88,15 @@ class BB extends Component {
   };
 
   onRouteChange = (route) => {
+    if (this.state.route === 'signout') {
+      this.setState({
+        isSignedIn: false
+      })
+    } else if (this.state.route === 'home') {
+      this.setState({
+        isSignedIn: true
+      })
+    }
     this.setState({
       route: route
     })
