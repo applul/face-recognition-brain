@@ -37,7 +37,8 @@ class BB extends Component {
       input: "",
       imageUrl: "",
       box: {},
-      route: 'signin'
+      route: 'signin',
+      isSignedIn: false
     }
   };
   componentDidMount() {
@@ -109,7 +110,7 @@ class BB extends Component {
         </div>
       : ( this.state.route === 'signin') 
         ? <SignIn onRouteChange = {this.onRouteChange} />
-        : <Register onRouteChange = {this.onRouteChange} />
+        : <Register onRouteChange = {this.onRouteChange} isSignedIn = {this.state.isSignedIn} />
       }
       </div>
     );
