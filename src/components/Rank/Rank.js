@@ -4,10 +4,10 @@ const Rank =(props) => {
     return(
         <div>
             <div className = ' white f3' >
-            {'Holo, your current Rank is... '}
+            {'Hello, your current Rank is... '}
             </div>
             <div className = ' white f1' >
-            {'#5'}
+            {'#5 (Placeholder)'}
             </div>
         </div>
     )
